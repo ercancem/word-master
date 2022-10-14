@@ -3531,7 +3531,7 @@ function growTiles() {
 
 
 function toggleDatasetIsActiveRow() {
-    const row = document.getElementById("row-" + game.pointer.row + "-guess");
+    const row = document.getElementById("row-" + game.pointer.row);
     if (row.dataset.isActiveRow == "true") {
         row.dataset.isActiveRow = "false";
     }
@@ -3769,7 +3769,7 @@ function createBoardRows() {
             score.append(scoreElement);
         }
     }
-    document.getElementById("row-0-guess").dataset.isActiveRow = "true";
+    document.getElementById("row-0").dataset.isActiveRow = "true";
     return;
 }
 

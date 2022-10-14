@@ -154,9 +154,10 @@ html {
     justify-content: center;
   }
 
-  /* [data-is-active-row=true] [data-is-blank-tile="false"] {
-    border: 2px solid var(--darkGray);
-  } */
+  [data-is-active-row=false] [data-is-blank-tile="false"] {
+    background-color: var(--green);
+    color: var(--backgroundDarkTheme);
+  }
 
   .score-element {
     /* display: inline-flex; */
@@ -169,29 +170,7 @@ html {
 
   }
 
-  /* .tile-row {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
-    margin-bottom: 10px;
-  }
 
-  .tile-row:last-child {
-    margin-bottom: 0px;
-  }
-
-  .tile {
-    display: inline-flex;
-    line-height: 1;
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border: 2px solid var(--lightGray);
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-  } */
 
 
 
