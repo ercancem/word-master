@@ -136,7 +136,7 @@ html {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 4px;
-    padding: 0 8px;
+    padding: 0 0 0 8px;
   }
 
   .guess-element {
@@ -211,9 +211,15 @@ html {
     user-select: none;
   }
 
-  /* .keyboard-button:last-child {
-    margin: 0;
-  } */
+  #enter,
+  #delete {
+    flex: 1.5;
+  }
+
+  .spacer {
+    display: block;
+    flex: 0.5;
+  }
 
   svg {
     pointer-events: none;

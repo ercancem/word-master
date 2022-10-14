@@ -3787,12 +3787,15 @@ function createBoardRows() {
 
 function createOnscreenKeyboard() {
     const keyboard = document.getElementById("onscreen-keyboard");
-    const set0 = new Set(["?", "a", "b", "c", "d", "e", "f", "g", "h", "i",]);
-    const set1 = new Set(["restart", "j", "k", "l", "m", "n", "o", "p", "q", "r",]);
-    const set2 = new Set(["enter", "s", "t", "u", "v", "w", "x", "y", "z", "delete",]);
-    // const set0 = new Set(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p",]);
-    // const set1 = new Set(["a", "s", "d", "f", "g", "h", "j", "k", "l",]);
-    // const set2 = new Set(["enter", "z", "x", "c", "v", "b", "n", "m", "delete"]);
+    
+    // const set0 = new Set(["?", "a", "b", "c", "d", "e", "f", "g", "h", "i",]);
+    // const set1 = new Set(["restart", "j", "k", "l", "m", "n", "o", "p", "q", "r",]);
+    // const set2 = new Set(["enter", "s", "t", "u", "v", "w", "x", "y", "z", "delete",]);
+    
+    
+    const set0 = new Set(["q", "w", "e", "r", "t", "y", "u", "i", "o", "p",]);
+    const set1 = new Set(["a", "s", "d", "f", "g", "h", "j", "k", "l",]);
+    const set2 = new Set(["enter", "z", "x", "c", "v", "b", "n", "m", "delete"]);
 
 
     for (let index = 0; index < 3; index++) {
@@ -3827,8 +3830,16 @@ function createOnscreenKeyboard() {
 
     document.getElementById("delete").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"> <path d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path></svg>';
 
-    document.getElementById("restart").innerHTML = '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path d="M19.146 4.854l-1.489 1.489A8 8 0 1 0 12 20a8.094 8.094 0 0 0 7.371-4.886 1 1 0 1 0-1.842-.779A6.071 6.071 0 0 1 12 18a6 6 0 1 1 4.243-10.243l-1.39 1.39a.5.5 0 0 0 .354.854H19.5A.5.5 0 0 0 20 9.5V5.207a.5.5 0 0 0-.854-.353z"/> </svg>';
+    // document.getElementById("restart").innerHTML = '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path d="M19.146 4.854l-1.489 1.489A8 8 0 1 0 12 20a8.094 8.094 0 0 0 7.371-4.886 1 1 0 1 0-1.842-.779A6.071 6.071 0 0 1 12 18a6 6 0 1 1 4.243-10.243l-1.39 1.39a.5.5 0 0 0 .354.854H19.5A.5.5 0 0 0 20 9.5V5.207a.5.5 0 0 0-.854-.353z"/> </svg>';
 
+
+    let spacer1 = document.createElement("div");
+    spacer1.classList.add("spacer");
+    document.getElementById("keyboard-row-1").prepend(spacer1)
+
+    let spacer2 = document.createElement("div");
+    spacer2.classList.add("spacer");
+    document.getElementById("keyboard-row-1").appendChild(spacer2)
     return;
 }
 
