@@ -3248,7 +3248,7 @@ class Guess {
             return;
         }
         else if (game.pointer.row == (game.guessNumber - 1) && game.guess.word != game.answer) {
-            toggleDatasetIsActiveRow();
+            // toggleDatasetIsActiveRow();
             colorScoreModule();
             gameOver();
             return;
@@ -3277,9 +3277,9 @@ class Guess {
             toggleDatasetIsActiveRow();
             // animateTiles("flip");
             colorScoreModule();
-            flipTiles();
+            // flipTiles();
             game.pointer.gotoNextRow();
-            toggleDatasetIsActiveRow();
+            // toggleDatasetIsActiveRow();
             return;
         }
     }
@@ -3293,7 +3293,8 @@ class Keyboard {
 
     processPhysicalKeyboardPress(e) {
         if (e.key === "Enter") {
-            processGuess();
+            // processGuess();
+            game.guess.processGuess();
             return;
         }
 
@@ -3344,7 +3345,8 @@ class OnscreenKeyboard {
             document.activeElement.blur(); //important
             return;
         } else if (e === "enter") {
-            processGuess();
+            // processGuess();
+            game.guess.processGuess();
             document.activeElement.blur();
             return;
         }else if (e === "restart") {
@@ -3408,51 +3410,49 @@ class Game {
 }
 
 
-function processGuess() {
-    if (game.pointer.isEmpty()) {
-        invalidSubmission("Not enough letters!")
-        return;
-    }
-    else if (!WORDS.includes(game.guess.word)) {
-        invalidSubmission("Not in the dictionary!");
-        return;
-    }
-    else if (game.pointer.row == (game.guessNumber - 1) && game.guess.word != game.answer) {
-        toggleDatasetIsActiveRow();
-        colorScoreModule();
-        gameOver();
-        return;
-    }
-    else if (correctGuessAtTurn(0)) {
-        toggleDatasetIsActiveRow();
-        correctGuess("That was hell of a guess!")
-        return;
-    }
-    else if (correctGuessAtTurn(1, 3)) {
-        toggleDatasetIsActiveRow();
-        correctGuess("Magnificient!")
-        return;
-    }
-    else if (correctGuessAtTurn(4)) {
-        toggleDatasetIsActiveRow();
-        correctGuess("Good!")
-        return;
-    }
-    else if (correctGuessAtTurn(5)) {
-        toggleDatasetIsActiveRow();
-        correctGuess("Phew!")
-        return;
-    }
-    else {
-        toggleDatasetIsActiveRow();
-        // animateTiles("flip");
-        colorScoreModule();
-        // flipTiles();
-        game.pointer.gotoNextRow();
-        toggleDatasetIsActiveRow();
-        return;
-    }
-}
+// function processGuess() {
+//     if (game.pointer.isEmpty()) {
+//         invalidSubmission("Not enough letters!")
+//         return;
+//     }
+//     else if (!WORDS.includes(game.guess.word)) {
+//         invalidSubmission("Not in the dictionary!");
+//         return;
+//     }
+//     else if (game.pointer.row == (game.guessNumber - 1) && game.guess.word != game.answer) {
+//         toggleDatasetIsActiveRow();
+//         colorScoreModule();
+//         gameOver();
+//         return;
+//     }
+//     else if (correctGuessAtTurn(0)) {
+//         toggleDatasetIsActiveRow();
+//         correctGuess("That was hell of a guess!")
+//         return;
+//     }
+//     else if (correctGuessAtTurn(1, 3)) {
+//         toggleDatasetIsActiveRow();
+//         correctGuess("Magnificient!")
+//         return;
+//     }
+//     else if (correctGuessAtTurn(4)) {
+//         toggleDatasetIsActiveRow();
+//         correctGuess("Good!")
+//         return;
+//     }
+//     else if (correctGuessAtTurn(5)) {
+//         toggleDatasetIsActiveRow();
+//         correctGuess("Phew!")
+//         return;
+//     }
+//     else {
+//         toggleDatasetIsActiveRow();
+//         colorScoreModule();
+//         game.pointer.gotoNextRow();
+//         toggleDatasetIsActiveRow();
+//         return;
+//     }
+// }
 
 
 
