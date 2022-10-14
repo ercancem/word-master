@@ -22,7 +22,7 @@ html {
   }
 
   body {
-    /* background-color: lightgoldenrodyellow; */
+    background-color: var(--buttonDarkTheme);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -55,9 +55,11 @@ html {
   }
 
   #message-box {
-    background-color: var(--black);
+    background-color: var(--green);
+    color: var(--buttonDarkTheme);
+    text-transform: uppercase;
     position: fixed;
-    top: 80px;
+    top: 93px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -65,7 +67,7 @@ html {
     padding: 0.8em;
     border-radius: 6px;
     opacity: 0.95;
-    color: white;
+   
     font-weight: normal;
     visibility: hidden;
   }
