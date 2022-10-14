@@ -50,10 +50,10 @@ html {
 
   h1 {
     color: white;
-    font-size: 2rem;
+    font-size: 1.2rem;
     text-align: center;
     font-family: Oswald, sans-serif;
-    padding: 20px;
+    padding: 10px 0;
     border-bottom: 1px solid var(--lightGray);
   }
 
@@ -62,7 +62,7 @@ html {
     color: var(--buttonDarkTheme);
     text-transform: uppercase;
     position: fixed;
-    top: 93px;
+    top: 80px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -100,7 +100,7 @@ html {
     justify-content: space-between;
     /* background-color: palevioletred; */
     width: 350px;
-    height: 420px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     font-size: 2rem;
