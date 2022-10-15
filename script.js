@@ -3248,7 +3248,7 @@ class Guess {
             return;
         }
         else if (game.pointer.row == (game.guessNumber - 1) && game.guess.word != game.answer) {
-            // toggleDatasetIsActiveRow();
+            toggleDatasetIsActiveRow();
             colorScoreModule();
             gameOver();
             return;
@@ -3275,11 +3275,8 @@ class Guess {
         }
         else {
             toggleDatasetIsActiveRow();
-            // animateTiles("flip");
             colorScoreModule();
-            // flipTiles();
             game.pointer.gotoNextRow();
-            // toggleDatasetIsActiveRow();
             return;
         }
     }

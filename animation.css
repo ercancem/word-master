@@ -9,7 +9,7 @@
       animation: shake 600ms ease-in-out;
     }
   
-    .tile.dance {
+    .dance {
       -webkit-animation: dance 500ms ease-in-out;
       animation: dance 500ms ease-in-out;
     }
