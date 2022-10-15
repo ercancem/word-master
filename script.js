@@ -3133,8 +3133,6 @@ const WORDS = [
     "zuni",
 ]
 
-
-
 class Pointer {
     constructor(game) {
         this.game = game;
@@ -3360,11 +3358,6 @@ class OnscreenKeyboard {
 }
 
 
-// const onscreenKeyboardSwitch = new AbortController();
-
-
-
-
 class Game {
     constructor(letterNumber = 4, guessNumber = 6) {
         this.letterNumber = letterNumber;
@@ -3388,72 +3381,7 @@ class Game {
         // this.keyboardSwitch.abort();
         return;
     }
-
-    // activateKeyboard() {
-    //     this.keyboard.addEventListener(
-    //         "click",
-    //         (event) => {
-    //             if (event.target.className === "keyboard-button") {
-    //                 // let key = event.target.textContent;
-    //                 let key = event.target.dataset.key;
-    //                 processMouseClick(key);
-    //             }
-    //         },
-    //         {
-    //             signal: onscreenKeyboardSwitch.signal,
-    //           }
-    //     );
-    // }
 }
-
-
-// function processGuess() {
-//     if (game.pointer.isEmpty()) {
-//         invalidSubmission("Not enough letters!")
-//         return;
-//     }
-//     else if (!WORDS.includes(game.guess.word)) {
-//         invalidSubmission("Not in the dictionary!");
-//         return;
-//     }
-//     else if (game.pointer.row == (game.guessNumber - 1) && game.guess.word != game.answer) {
-//         toggleDatasetIsActiveRow();
-//         colorScoreModule();
-//         gameOver();
-//         return;
-//     }
-//     else if (correctGuessAtTurn(0)) {
-//         toggleDatasetIsActiveRow();
-//         correctGuess("That was hell of a guess!")
-//         return;
-//     }
-//     else if (correctGuessAtTurn(1, 3)) {
-//         toggleDatasetIsActiveRow();
-//         correctGuess("Magnificient!")
-//         return;
-//     }
-//     else if (correctGuessAtTurn(4)) {
-//         toggleDatasetIsActiveRow();
-//         correctGuess("Good!")
-//         return;
-//     }
-//     else if (correctGuessAtTurn(5)) {
-//         toggleDatasetIsActiveRow();
-//         correctGuess("Phew!")
-//         return;
-//     }
-//     else {
-//         toggleDatasetIsActiveRow();
-//         colorScoreModule();
-//         game.pointer.gotoNextRow();
-//         toggleDatasetIsActiveRow();
-//         return;
-//     }
-// }
-
-
-
-
 
 createDomElements();
 const game = new Game();
@@ -3472,11 +3400,6 @@ function invalidSubmission(message) {
 function processMessageBox(message) {
     var messageBox = document.getElementById("message-box");
     messageBox.textContent = message;
-    // const par = document.createElement("p");
-    // toastText = document.createTextNode(message);
-    // par.append(toastText);
-    // messageBox.appendChild(par);
-    // messageBox.firstChild.textContent = message;
     messageBox.style.visibility = "visible";
     return;
 }
@@ -3578,26 +3501,6 @@ function colorScoreModule() {
     convertedLetters.forEach((color, index) => {
         var square = getScoreTileFromCurrentRow(index);
         square.classList.add(color);
-
-        // var squareValue = square.textContent.toLowerCase();
-        // var key = document.getElementById(squareValue);
-        // if (number == 2) {
-        //     square.classList.add("final-green");
-        //     // square.dataset.color = "green"
-        //     // key.dataset.state = "correct";
-        // } else if (number == 1) {
-        //     square.classList.add("final-yellow");
-        //     if (key.dataset.state !== "correct") {
-        //         key.dataset.state = "nonpositional";
-        //         square.dataset.color = "yellow"
-        //     }
-        // } else {
-        //     square.classList.add("final-dark-gray");
-        //     if (key.dataset.state === "neutral") {
-        //         key.dataset.state = "incorrect";
-        //         square.dataset.color = "gray"
-        //     }
-        // }
     });
     return;
 }
@@ -3694,11 +3597,6 @@ function createMessageBoxDiv(divId) {
     const gameContainer = document.getElementById("game-container");
     const messageBoxContainer = document.createElement("div");
     messageBoxContainer.setAttribute("id", divId);
-    // messageBoxContainer.classList.add("message-box");
-    // const par = document.createElement("p");
-    // dummyText = document.createTextNode("I am a toast!");
-    // par.appendChild(dummyText);
-    // messageBoxContainer.append(dummyText);
     messageBoxContainer.textContent = ("I am a toast!")
     gameContainer.append(messageBoxContainer);
     return;
